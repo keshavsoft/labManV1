@@ -1,0 +1,51 @@
+{
+  "tableName": "doctors",
+  "data": [],
+  "Vertical": [],
+  "DataTableOptions": {
+    "Header": {
+      "autoFocus": "LedgerName"
+    }
+  },
+  "NonSecured": {
+    "SubRoutes": [
+      "ShowAll",
+      "Insert",
+      "Pipe"
+    ]
+  },
+  "PrimarykeyTableNames": [],
+  "PrimarykeyTables": [],
+  "columnsConfig": [
+    {
+      "columnName": "doctorName",
+      "title": "doctorName",
+      "cellConfig": {
+        "width": "150px"
+      },
+      "isSearchable": false,
+      "dataListSource": ""
+    },
+    {
+      "columnName": "doctorMobile",
+      "title": "doctorMobile",
+      "cellConfig": {
+        "width": "100px"
+      },
+      "isSearchable": false,
+      "dataListSource": "AccountNames.AccountName"
+    },
+    {
+      "columnName": "doctorSpeciality",
+      "title": "doctorSpeciality",
+      "cellConfig": {
+        "width": "100px"
+      }
+    },
+    {
+      "field": "pk",
+      "title": "pk",
+      "primary": true
+    }
+  ]
+}
