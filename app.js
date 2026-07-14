@@ -14,5 +14,5 @@ setupRoutes(app);
 const { port } = startServer(app);
 
 if (process.env.OPEN_BROWSER === "true") {
-    exec(`start http://localhost:${port}/v27/quotations/index.html`);
+    exec(`start http://localhost:${port}/v2/doctors/index.html`);
 };
