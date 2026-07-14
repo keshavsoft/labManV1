@@ -1,23 +1,12 @@
 import { getKSTableConfig } from "./getKSTableConfig.js";
 import showByPk from "./showByPk/index.js";
 import editByPk from "./editByPk/index.js";
-import { clubData } from "./helpers/clubData.js";
-
-const jFLocalToInputkSTableContainer = (inValue) => {
-    const jVarLocalHtmlId = 'kSTableContainer';
-    const jVarLocalkSTableContainer = document.getElementById(jVarLocalHtmlId);
-
-    if (jVarLocalkSTableContainer) {
-        jVarLocalkSTableContainer.innerHTML = inValue;
-    };
-};
+import getData from "./getData.js";
 
 const startFunc = async () => {
-    jFLocalToInputkSTableContainer("");
-
     const config = await getKSTableConfig();
 
-    config.defaults.data = await clubData();
+    config.defaults.data = await getData();
 
     if (config.callbacks) {
         if (config.callbacks.table.body.show) {
@@ -28,14 +17,12 @@ const startFunc = async () => {
 
         if (config.callbacks.table.body.edit) {
             config.callbacks.table.body.edit = fromLibrary => {
-                // console.log("jjjjjjjj------ : ", fromLibrary);
-
                 editByPk(fromLibrary.item.pk);
             };
         };
     }
 
-    const ksTable1 = new window.ks.classes.tableShowOnly(config);
+    ksTable1 = new window.ks.classes.tableShowOnly(config);
     ksTable1.initShowTable();
 };
 

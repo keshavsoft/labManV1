@@ -1,8 +1,8 @@
-import headDescHtmlId from "./headDescHtmlId/start.js";
+import showAllHtmlId from "./showAllHtmlId/start.js";
 import createHtmlId from "./createHtmlId/start.js";
 
 const hookAllListeners = () => {
-    headDescHtmlId();
+    showAllHtmlId();
     createHtmlId();
 };
 

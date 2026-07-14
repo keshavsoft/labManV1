@@ -5,7 +5,7 @@
         "brandClass1": "text-sm"
     },
     "title": {
-        "text": "quotations",
+        "text": "Doctors",
         "htmlId": "htmlId"
     },
     "items": [
@@ -21,8 +21,8 @@
             "href1": "../both/index.html"
         },
         {
-            "text": "Descend",
-            "id": "headDescHtmlId",
+            "text": "showAll",
+            "id": "showAllHtmlId",
             "icon": [],
             "uiClasses": {
                 "aClass": "",
