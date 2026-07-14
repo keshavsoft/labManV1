@@ -19,7 +19,17 @@
             },
             "svgName": "arrowDown"
         },
-           {
+        {
+            "text": "crud",
+            "id": "crudHtmlId",
+            "icon": [],
+            "uiClasses": {
+                "aClass": "",
+                "svgDivClass": "size-10"
+            },
+            "svgName": "arrowDown"
+        },
+        {
             "text": "Print",
             "id": "PrintHtmlId",
             "icon": [],
