@@ -51,10 +51,10 @@
         }
     },
     "endPoints": {
-        "create": "/api/v1/tests/insertWithMeta",
-        "update": "/api/v1/tests/modify",
-        "delete": "/api/v1/tests/del",
-        "read": "/api/v1/tests/showAll",
+        "create": "/api/v1/bills/insertWithMeta",
+        "update": "/api/v1/bills/modify",
+        "delete": "/api/v1/bills/del",
+        "read": "/api/v1/bills/showAll",
         "find": "",
         "filter": "",
         "dataLists": {},
