@@ -1,0 +1,145 @@
+{
+    "containerId": "kSHeadContainer",
+    "tableName": "crud",
+    "mode": "create",
+    "layout": {
+        "verticalPosition": "top",
+        "type": "table"
+    },
+    "options": {
+        "firstRow": {
+            "showSearch": false
+        },
+        "enabledSections": [
+            "vertical",
+            "table",
+            "footer"
+        ],
+        "table": {
+            "showFooterRows": true,
+            "showDataList": true,
+            "showSave": true,
+            "showActions": true,
+            "showSerial": true,
+            "showFooter": true,
+            "footer": {
+                "showAggregateRows": false,
+                "showTotals": false,
+                "createNewRow": true
+            },
+            "body": {
+                "showEdit": true,
+                "showDelete": true,
+                "showShow": false,
+                "deleteType": "icon",
+                "deleteIconSize": "xl"
+            }
+        }
+    },
+    "callbacks": {
+        "table": {
+            "onDelete1": "function",
+            "onReadFail": "function",
+            "body": {
+                "update": "function",
+                "show": "function",
+                "edit": "function"
+            },
+            "footer": {
+                "onSave": "function"
+            }
+        }
+    },
+    "endPoints": {
+        "create": "/api/v1/tests/insertWithMeta",
+        "update": "/api/v1/tests/modify",
+        "delete": "/api/v1/tests/del",
+        "read": "/api/v1/tests/showAll",
+        "find": "",
+        "filter": "",
+        "dataLists": {},
+        "dataListEndpoints": {
+            "tests": "/api/v1/tests/showAll"
+        }
+    },
+    "columnsConfig": [
+        {
+            "columnName": "testName",
+            "title": "test Name",
+            "field": "testName",
+            "cellConfig": {
+                "width": "200px"
+            },
+            "dataListSource": "tests.testName",
+            "tableFooterDataListShow": true,
+            "uiClasses": {
+                "form": {
+                    "rowClass": "flex items-center space-x-4"
+                }
+            },
+            "isVisible": true,
+            "allowOnChange": false,
+            "onChangeType": "",
+            "isConsider": true,
+            "tableConfig": {
+                "footerConfig": {
+                    "enterAsTab": true,
+                    "isNotEmpty": true
+                }
+            }
+        },
+        {
+            "columnName": "testRate",
+            "field": "test Rate",
+            "title": "test Rate",
+            "isVisible": true,
+            "cellConfig": {
+                "width": "200px"
+            },
+            "type": "number"
+        },
+        {
+            "columnName": "DisPer",
+            "field": "DisPer",
+            "title": "DisPer",
+            "isVisible": true,
+            "cellConfig": {
+                "width": "200px"
+            },
+            "type": "number",
+            "tableConfig": {
+                "footerConfig": {
+                    "allowOnChange": true,
+                    "onKeyDown": true,
+                    "onKeyDownType": "OrigRate",
+                    "type": "number",
+                    "enterAsTab": true,
+                    "evalformula": "testRate * (1 - (DisPer/100))",
+                    "evalToControl": "Amount"
+                }
+            }
+        },
+        {
+            "columnName": "Amount",
+            "field": "Amount",
+            "title": "Amount",
+            "isVisible": true,
+            "cellConfig": {
+                "width": "200px"
+            },
+            "type": "number"
+        },
+        {
+            "field": "pk",
+            "title": "pk",
+            "primary": true,
+            "isVisible": false,
+            "cellConfig": {
+                "width": "50px"
+            }
+        }
+    ],
+    "defaults": {
+        "data": []
+    }
+}

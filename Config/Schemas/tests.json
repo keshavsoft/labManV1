@@ -1,5 +1,5 @@
 {
-  "tableName": "doctors",
+  "tableName": "tests",
   "data": [],
   "Vertical": [],
   "DataTableOptions": {
@@ -18,9 +18,9 @@
   "PrimarykeyTables": [],
   "columnsConfig": [
     {
-      "columnName": "doctorName",
-      "title": "Doctor Name",
-      "field": "doctorName",
+      "columnName": "testName",
+      "title": "test Name",
+      "field": "testName",
       "cellConfig": {
         "width": "200px"
       },
@@ -43,19 +43,9 @@
       }
     },
     {
-      "columnName": "doctorMobile",
-      "field": "Doctor Mobile",
-      "title": "Doctor Mobile",
-      "primary": true,
-      "isVisible": true,
-      "cellConfig": {
-        "width": "200px"
-      }
-    },
-    {
-      "columnName": "doctorSpeciality",
-      "field": "Speciality",
-      "title": "Speciality",
+      "columnName": "testRate",
+      "field": "test Rate",
+      "title": "test Rate",
       "primary": true,
       "isVisible": true,
       "cellConfig": {
