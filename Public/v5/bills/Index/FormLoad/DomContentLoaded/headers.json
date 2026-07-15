@@ -10,14 +10,25 @@
     },
     "items": [
         {
-            "text": "showAll",
-            "id": "showAllHtmlId",
+            "text": "Masters",
+            "id": "MastersHtmlId",
             "icon": [],
             "uiClasses": {
                 "aClass": "",
                 "svgDivClass": "size-10"
             },
-            "svgName": "arrowDown"
+            "svgName": "arrowDown",
+            "dropdownType": "responsive",
+            "dropdownItems": [
+                {
+                    "text": "Doctors",
+                    "href": "../doctors/index.html"
+                },
+                {
+                    "text": "Tests",
+                    "href": "../tests/index.html"
+                }
+            ]
         },
         {
             "text": "crud",
