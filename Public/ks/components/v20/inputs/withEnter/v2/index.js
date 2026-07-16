@@ -14,9 +14,15 @@ class KsTableFooterInputCore extends KsInput {
     }
 
     renderInput({ inInput }) {
-        const inLabel = this.getAttribute("label") || this.ksLabel || "";
-        const inLabelClass = this.getAttribute("ksLabelClass") || this.ksLabelClass || "";
-        const inRowClass = this.getAttribute("ksRowClass") || this.ksRowClass || "";
+        // const inLabel = this.getAttribute("label") || this.ksLabel || "";
+        // const inLabelClass = this.getAttribute("ksLabelClass") || this.ksLabelClass || "";
+        // const inRowClass = this.getAttribute("ksRowClass") || this.ksRowClass || "";
+
+        const inLabel = this.getAttribute("label");
+        const inLabelClass = this.getAttribute("ksLabelClass");
+        const inRowClass = this.getAttribute("ksRowClass");
+
+        // console.log("inRowClass : ", inRowClass);
 
         const wrapper = createWrapper({ inRowClass });
         const label = createLabel({ labelText: inLabel, inLabelClass });

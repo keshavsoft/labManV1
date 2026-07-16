@@ -13,19 +13,21 @@ export const createDefaultInput = ({ inCol, inDefaultRow, inDataStore,
     const col = inCol.columnName;
     // const row = document.createElement("ks-input");
     const row = document.createElement("ks-input-with-enter");
+    // console.log("bbbbbbbbbb : ", inCol?.uiClasses?.form?.rowClass);
 
     // const defaultValue = col in inDefaultRow ? inDefaultRow[col] : "";
 
     const defaultValue = returnDefault({ inCol, inDefaultRow });
 
-    if (window.ksShowLogTree.components.vertical.htmlForm) console.log("window.ksShowLogTree.components.vertical.htmlForm - createDefaultInput : ", inDefaultRow, defaultValue, row, defaultValue);
+    // if (window.ksShowLogTree.components.vertical.htmlForm) console.log("window.ksShowLogTree.components.vertical.htmlForm - createDefaultInput : ", inDefaultRow, defaultValue, row, defaultValue);
 
     row.setAttribute("label", inCol.title);
     row.setAttribute("ksName", col);
     row.setAttribute("source", col);
     row.setAttribute("tabIndex", inCol.tabIndex);
 
-    // console.log("bbbbbbbbbb : ", inEnterAsTab);
+    if (inCol?.uiClasses?.form.labelClass) row.setAttribute("ksLabelClass", inCol?.uiClasses?.form?.labelClass);
+    if (inCol?.uiClasses?.form.rowClass) row.setAttribute("ksRowClass", inCol?.uiClasses?.form?.rowClass);
 
     if (inType !== undefined) {
         row.setAttribute("type", inType);

@@ -28,6 +28,16 @@
                 "svgDivClass": "size-10"
             },
             "svgName": "arrowDown"
+        },
+        {
+            "text": "vertical",
+            "id": "verticalHtmlId",
+            "icon": [],
+            "uiClasses": {
+                "aClass": "",
+                "svgDivClass": "size-10"
+            },
+            "svgName": "arrowDown"
         }
     ]
 }

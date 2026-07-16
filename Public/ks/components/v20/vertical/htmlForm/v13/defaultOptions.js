@@ -83,7 +83,7 @@ export const defaultOptionsInputsStacked = {
         form: {
             class: 'flex flex-col gap-4',
             fieldset: {
-                class: 'grid grid-cols-3 gap-x-8 gap-y-4 p-2 labelAbove'
+                class: 'grid grid-cols-1 gap-x-8 gap-y-4 p-2 labelAbove'
             },
             buttonRow: {
                 class: 'flex gap-2 self-center',

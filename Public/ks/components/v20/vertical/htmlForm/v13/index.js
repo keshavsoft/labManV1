@@ -20,29 +20,29 @@ class KsHtmlForm extends HTMLElement {
     init(options) {
         const layoutType = options?.layoutType || options?.inVerticalOptions?.layoutType;
         const layoutPreset = layouts[layoutType] || layouts.inputsInline;
-        // console.log("layoutPreset : ", layoutType, options, layoutPreset);
+        console.log("layoutPreset : ", layoutType, layoutPreset, options);
         // Merge uiClasses recursively to allow override and fallbacks
-        const mergedUiClasses = {
-            ...layoutPreset.uiClasses,
-            ...options?.uiClasses,
-            form: {
-                ...layoutPreset.uiClasses?.form,
-                ...options?.uiClasses?.form,
-                fieldset: {
-                    ...layoutPreset.uiClasses?.form?.fieldset,
-                    ...options?.uiClasses?.form?.fieldset
-                },
-                buttonRow: {
-                    ...layoutPreset.uiClasses?.form?.buttonRow,
-                    ...options?.uiClasses?.form?.buttonRow
-                }
-            }
-        };
+        // const mergedUiClasses = {
+        //     ...layoutPreset.uiClasses,
+        //     ...options?.uiClasses,
+        //     form: {
+        //         ...layoutPreset.uiClasses?.form,
+        //         ...options?.uiClasses?.form,
+        //         fieldset: {
+        //             ...layoutPreset.uiClasses?.form?.fieldset,
+        //             ...options?.uiClasses?.form?.fieldset
+        //         },
+        //         buttonRow: {
+        //             ...layoutPreset.uiClasses?.form?.buttonRow,
+        //             ...options?.uiClasses?.form?.buttonRow
+        //         }
+        //     }
+        // };
 
         this.options = {
             ...layoutPreset,
             ...options,
-            uiClasses: mergedUiClasses
+            uiClasses: layoutPreset.uiClasses
         };
         this.render();
     }

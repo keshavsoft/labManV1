@@ -34,10 +34,12 @@ const renderForm = ({ element, options }) => {
 
     const isFormDisabled = localIsFormDisabled({ isModeDefined, isEdit, isCreate, inIsDisabled });
 
-    const form = createForm({ uiClasses });
+    const form = createForm({ formClass: uiClasses.form?.class });
+    // console.log("uiClasses------ : ", uiClasses);
 
     const fieldset = createFieldset({
-        uiClasses, inIsDisabled: isFormDisabled,
+        fieldsetClass: uiClasses.form.fieldset?.class,
+        inIsDisabled: isFormDisabled,
         inPk: inDefaultRow?.pk
     });
 
