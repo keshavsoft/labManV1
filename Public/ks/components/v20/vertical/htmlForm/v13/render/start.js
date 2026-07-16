@@ -48,7 +48,8 @@ const renderForm = ({ element, options }) => {
     const inputsFragment = createInputRows({
         inColumnsConfig,
         inDefaultRow,
-        inDataStore
+        inDataStore,
+        rowClass: uiClasses?.form?.column?.rowClass
     });
 
     fieldset.appendChild(inputsFragment);

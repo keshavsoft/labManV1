@@ -13,6 +13,9 @@ export const defaultOptionsSingleLine = {
                     edit: 'flex-1 px-4 py-1 bg-blue-500 text-white rounded',
                     cancel: 'flex-1 px-4 py-1 bg-red-500 text-white rounded'
                 }
+            },
+            column: {
+                rowClass: "flex items-center space-x-4"
             }
         }
     }
@@ -93,6 +96,9 @@ export const defaultOptionsInputsStacked = {
                     edit: 'flex-1 px-4 py-1 bg-blue-500 text-white rounded',
                     cancel: 'flex-1 px-4 py-1 bg-red-500 text-white rounded'
                 }
+            },
+            column: {
+                rowClass: "grid grid-cols-[180px_1fr] items-center gap-4"
             }
         }
     }

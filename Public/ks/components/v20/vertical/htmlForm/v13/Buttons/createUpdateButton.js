@@ -23,6 +23,7 @@ export const createUpdateButton = ({ options = {}, inServices, inConfig }) => {
         text: options.updateButtonText || "Update",
         class: options.updateButtonClass || options.uiClasses?.updateButtonClass || options.uiClasses?.buttonRow?.buttons?.update || options.uiClasses?.form?.buttonRow?.buttons?.update || defaultOptions.uiClasses.form.buttonRow.buttons.update
     });
+    console.log("inConfig : ", inConfig, inServices);
 
     button.onClick = async (data) => {
         let fromService;
@@ -35,26 +36,6 @@ export const createUpdateButton = ({ options = {}, inServices, inConfig }) => {
         if (fromService.ok) {
             toggleButtons({ inButton: button });
         };
-
-
-        // if (inServices?.actionsFetchOnly?.update) {
-        //     fromService = await inServices.actionsFetchOnly.update({
-        //         inEndPoint: inConfig.endPoints.update,
-        //         payload: data
-        //     });
-        // } else if (inServices?.actions?.update) {
-        //     fromService = await inServices.actions.update({
-        //         inEndPoint: inConfig.endPoints.update,
-        //         payload: data
-        //     });
-        // } else {
-        //     fromService = await inServices.actionsFetchOnly.create({
-        //         inEndPoint: inConfig.endPoints.update || inConfig.endPoints.create,
-        //         payload: data
-        //     });
-        // }
-
-        // inConfig.callbacks.vertical.onSuccess(fromService);
     };
 
     return button;

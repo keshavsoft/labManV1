@@ -1,7 +1,10 @@
 import { createDataListInput } from "./createDataListInput.js";
 import { createDefaultInput } from "./createDefaultInput.js";
 
-export const createInputRow = ({ inCol, inDefaultRow, inDataStore, inEnterAsTab }) => {
+export const createInputRow = ({ inCol, inDefaultRow, inDataStore, inEnterAsTab,
+    rowClass
+}) => {
+
     const dataListFillName = inCol.dataListFillName;
 
     let row;
@@ -20,7 +23,8 @@ export const createInputRow = ({ inCol, inDefaultRow, inDataStore, inEnterAsTab 
                 inDefaultRow,
                 inDataStore, inEnterAsTab,
                 inDataListFillName: dataListFillName,
-                inType: "type" in inCol ? inCol.type : ""
+                inType: "type" in inCol ? inCol.type : "",
+                rowClass
             });
         }
     }

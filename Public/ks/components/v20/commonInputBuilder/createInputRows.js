@@ -1,6 +1,9 @@
 import { createInputRow } from "./createInputRow.js";
 
-const createInputRows = ({ inColumnsConfig, inDefaultRow, inDataStore, inputs }) => {
+const createInputRows = ({ inColumnsConfig, inDefaultRow, inDataStore, inputs,
+    rowClass
+}) => {
+
     const fragment = document.createDocumentFragment();
 
     if (window.ksShowLogTree.components.vertical.htmlForm) console.log("window.ksShowLogTree.components.vertical.htmlForm - createInputRow : ", inColumnsConfig, inDefaultRow, inDataStore, inputs);
@@ -12,7 +15,8 @@ const createInputRows = ({ inColumnsConfig, inDefaultRow, inDataStore, inputs })
                 inDefaultRow,
                 inDataStore,
                 inputs: inputs,
-                inEnterAsTab: col?.verticalConfig?.enterAsTab
+                inEnterAsTab: col?.verticalConfig?.enterAsTab,
+                rowClass: col?.uiClasses?.form?.rowClass || rowClass
             });
 
             if (row) {

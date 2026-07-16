@@ -8,7 +8,7 @@ const returnDefault = ({ inCol, inDefaultRow }) => {
 };
 
 export const createDefaultInput = ({ inCol, inDefaultRow, inDataStore,
-    inDataListFillName, inType, inEnterAsTab }) => {
+    inDataListFillName, inType, inEnterAsTab, rowClass }) => {
 
     const col = inCol.columnName;
     // const row = document.createElement("ks-input");
@@ -27,7 +27,9 @@ export const createDefaultInput = ({ inCol, inDefaultRow, inDataStore,
     row.setAttribute("tabIndex", inCol.tabIndex);
 
     if (inCol?.uiClasses?.form.labelClass) row.setAttribute("ksLabelClass", inCol?.uiClasses?.form?.labelClass);
-    if (inCol?.uiClasses?.form.rowClass) row.setAttribute("ksRowClass", inCol?.uiClasses?.form?.rowClass);
+    if (rowClass) row.setAttribute("ksRowClass", rowClass);
+
+    // row.setAttribute("ksRowClass", inCol?.uiClasses?.form?.rowClass || rowClass);
 
     if (inType !== undefined) {
         row.setAttribute("type", inType);
