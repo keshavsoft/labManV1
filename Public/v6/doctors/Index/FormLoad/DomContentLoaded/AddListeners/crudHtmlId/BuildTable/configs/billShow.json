@@ -91,7 +91,6 @@
             "columnName": "doctorMobile",
             "field": "Doctor Mobile",
             "title": "Doctor Mobile",
-            "primary": true,
             "isVisible": true,
             "cellConfig": {
                 "width": "200px"
@@ -101,7 +100,6 @@
             "columnName": "doctorSpeciality",
             "field": "Speciality",
             "title": "Speciality",
-            "primary": true,
             "isVisible": true,
             "cellConfig": {
                 "width": "200px"
