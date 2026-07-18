@@ -61,7 +61,7 @@
     "dataLists": {},
     "dataListEndpoints": {}
   },
-  "columnsConfig": [
+  "columnsConfig1": [
     {
       "columnName": "doctorName",
       "title": "Doctor Name",
@@ -100,6 +100,61 @@
       "columnName": "doctorSpeciality",
       "field": "Speciality",
       "title": "Speciality",
+      "isVisible": true,
+      "cellConfig": {
+        "width": "200px"
+      }
+    },
+    {
+      "field": "pk",
+      "title": "pk",
+      "primary": true,
+      "isVisible": false,
+      "cellConfig": {
+        "width": "50px"
+      }
+    }
+  ],
+  "columnsConfig": [
+    {
+      "columnName": "doctorName",
+      "title": "doctorName",
+      "field": "doctorName",
+      "cellConfig": {
+        "width": "200px"
+      },
+      "dataListSource": "",
+      "tableFooterDataListShow": false,
+      "uiClasses": {
+        "form": {
+          "rowClass": "flex items-center space-x-4"
+        }
+      },
+      "allowOnChange": false,
+      "onChangeType": "",
+      "isConsider": true,
+      "tableConfig": {
+        "footerConfig": {
+          "enterAsTab": true,
+          "isNotEmpty": true
+        }
+      }
+    },
+    {
+      "columnName": "doctorMobile",
+      "field": "doctorMobile",
+      "title": "doctorMobile",
+      "primary": true,
+      "isVisible": true,
+      "cellConfig": {
+        "width": "200px"
+      }
+    },
+    {
+      "columnName": "doctorSpeciality",
+      "field": "doctorSpeciality",
+      "title": "doctorSpeciality",
+      "primary": true,
       "isVisible": true,
       "cellConfig": {
         "width": "200px"
